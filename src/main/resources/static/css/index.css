@@ -50,3 +50,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     width: 100px;
     height: 100px;
 }
+
+.cuadrado{
+    background: #aaa;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+a{
+    display:block;
+}
