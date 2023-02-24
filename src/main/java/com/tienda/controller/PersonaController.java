@@ -1,7 +1,7 @@
 
 package com.tienda.controller;
 
-import ch.qos.logback.core.model.Model;
+
 import com.tienda.entity.Pais;
 import com.tienda.entity.Persona;
 import com.tienda.service.IPaisService;
@@ -9,6 +9,7 @@ import com.tienda.service.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
@@ -24,10 +25,10 @@ public class PersonaController {
     @Autowired
     private IPaisService paisService;
     
-    @GetMapping("/persona")
+    @GetMapping("/personas")
     public String index (Model model) {
         List<Persona> listaPersona = personaService.getAllPersona();
-        model.addAttribute("titulo", "Table Personas");
+        model.addAttribute("titulo", "Tabla Personas");
         model.addAttribute("personas", listaPersona);
         return "personas";
     }
