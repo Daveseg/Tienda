@@ -10,5 +10,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface PersonaRepository extends CrudRepository<Persona,Long>,JpaRepository<Persona, Long>  {
     
     List<Persona> findByApellido1(String apellido1);
+    Persona findByNombre (String nombre);
 }
 
